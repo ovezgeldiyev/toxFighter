@@ -60,12 +60,16 @@
             justify-content: space-between;
             width: 100%;
             max-width: 287px;
+            transition: .3s ease;
+            &:hover {
+                background: #a9aab040;
 
+            }
             &-icon {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: calc(25% - 20px);
+                width: calc(35% - 20px);
                 max-width: 63px;
 
                 img {
@@ -74,20 +78,25 @@
             }
 
             &-text {
-                width: calc(75% - 25px);
+                width: calc(65% - 20px);
 
             }
 
             h5 {
                 color: $white;
                 margin-bottom: 8px;
+                opacity: .2;
             }
 
             p {
                 color: $white;
                 margin-bottom: 4px;
-
+                &:last-child {
+                   color: #00FF75;
+                    margin: 0;
+                }
             }
+           
         }
 
         &-content {
@@ -97,9 +106,39 @@
             flex-direction: column;
             border-radius: 15px;
             overflow: hidden;
-            height: 590px;
 
-            &-header {}
+            &-header {
+                background: linear-gradient(91.69deg, #373D71 3.52%, #515E7B 96.63%);
+                padding: 16px 16px 8px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                h4 {
+                    width: 100%;
+                    margin-bottom: 8px;
+                    text-align: center;
+                }
+                p {
+                    width: calc(50% - 8px);
+                    margin-right: 8px;
+                    text-align: end;
+                    &:last-child {
+                        margin: 0;
+                        width: 50%;
+                        text-align: start;
+                    }
+                }
+            }
+            &-intro {
+                background: #23253980;
+                height: 455px;
+                backdrop-filter: blur(17.5px);
+            }
+            &-footer {
+                background: linear-gradient(91.69deg, #373D71 3.52%, #515E7B 96.63%);
+                padding: 13px 16px;
+                text-align: center;
+            }
         }
         &-info {
             display: flex;

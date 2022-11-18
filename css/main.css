@@ -110,6 +110,18 @@ h2.big span {
   opacity: 0.7;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36x;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30x;
+}
+
 h5 {
   font-weight: 700;
   font-size: 20px;
@@ -353,6 +365,11 @@ main {
           justify-content: space-between;
   width: 100%;
   max-width: 287px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.hero__inner-user:hover {
+  background: #a9aab040;
 }
 .hero__inner-user-icon {
   display: -webkit-box;
@@ -364,22 +381,27 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc(25% - 20px);
+  width: calc(35% - 20px);
   max-width: 63px;
 }
 .hero__inner-user-icon img {
   width: 100%;
 }
 .hero__inner-user-text {
-  width: calc(75% - 25px);
+  width: calc(65% - 20px);
 }
 .hero__inner-user h5 {
   color: #fff;
   margin-bottom: 8px;
+  opacity: 0.2;
 }
 .hero__inner-user p {
   color: #fff;
   margin-bottom: 4px;
+}
+.hero__inner-user p:last-child {
+  color: #00FF75;
+  margin: 0;
 }
 .hero__inner-content {
   width: calc(50% - 40px);
@@ -393,7 +415,44 @@ main {
           flex-direction: column;
   border-radius: 15px;
   overflow: hidden;
-  height: 590px;
+}
+.hero__inner-content-header {
+  background: linear-gradient(91.69deg, #373D71 3.52%, #515E7B 96.63%);
+  padding: 16px 16px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.hero__inner-content-header h4 {
+  width: 100%;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.hero__inner-content-header p {
+  width: calc(50% - 8px);
+  margin-right: 8px;
+  text-align: end;
+}
+.hero__inner-content-header p:last-child {
+  margin: 0;
+  width: 50%;
+  text-align: start;
+}
+.hero__inner-content-intro {
+  background: #23253980;
+  height: 455px;
+  -webkit-backdrop-filter: blur(17.5px);
+          backdrop-filter: blur(17.5px);
+}
+.hero__inner-content-footer {
+  background: linear-gradient(91.69deg, #373D71 3.52%, #515E7B 96.63%);
+  padding: 13px 16px;
+  text-align: center;
 }
 .hero__inner-info {
   display: -webkit-box;
