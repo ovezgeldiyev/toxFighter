@@ -56,36 +56,33 @@ window.onclick = function (event) {
 // };
 // // scroll end
 
-// faq start
-const tabBtn = document.querySelectorAll(".tabBtn");
-const tabEvent = document.querySelectorAll(".tabEvent");
-tabBtn.forEach((e) => {
-  onTabClick(tabBtn, tabEvent, e);
-});
-function onTabClick(tabBtns, tabItems, item) {
-  item.addEventListener("click", function (e) {
-    let currentBtn = item;
-    let tabId = currentBtn.getAttribute("data-tab");
-    let currentTab = document.querySelector(tabId);
-    if (currentBtn.classList.contains("active")) {
-      const faq = currentBtn.parentElement.querySelector(".tabEvent");
-      if (faq) {
-        faq.classList.remove("active");
-        currentBtn.classList.remove("active");
-      }
-    } else if (!currentBtn.classList.contains("active")) {
-      tabBtns.forEach(function (item) {
-        item.classList.remove("active");
-      });
+var myTimer;
+function clock() {
+  myTimer = setInterval(myClock, 1000);
+  let hour = document.querySelector("#hour");
+  let minute = document.querySelector("#minute");
+  let second = document.querySelector("#second");
 
-      tabItems.forEach(function (item) {
-        item.classList.remove("active");
-      });
-      currentBtn.classList.add("active");
-      currentTab.classList.add("active");
+  var c = 3610; //Initially set to 1 hour
+  function myClock() {
+    --c;
+    var seconds = c % 60; // Seconds that cannot be written in minutes
+    var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+    var minutes = secondsInMinutes % 60; // Minutes that cannot be written in hours
+    var hours = (secondsInMinutes - minutes) / 60;
+    // Now in hours, minutes and seconds, you have the time you need.
+    console.clear();
+    console.log(hours + ":" + minutes + ":" + seconds);
+    hour.innerText = hours.toString();
+    minute.innerText = minutes.toString();
+    second.innerText = seconds.toString();
+
+    if (c == 0) {
+      clearInterval(myTimer);
     }
-  });
+  }
 }
-// faq end
+
+clock();
 
 

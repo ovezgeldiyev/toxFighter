@@ -39,6 +39,9 @@
       font-size: 22px;
       line-height: 28px;
     }
+    &.big{
+      padding: 14px 85px;
+    }
   }
   @include hero-xlg-xxlg;
   @include nav-xlg-xxlg;
@@ -50,6 +53,17 @@
   ::-webkit-scrollbar {
     display: none;
   }
+  h2 {
+    font-size: 30px;
+    line-height: 38px;
+    span {
+      font-size: 21px;
+      line-height: 27px;
+    }
+    &.big{
+      padding: 13px 80px;
+    }
+  }
   @include hero-lg-xlg;
   @include nav-lg-xlg;
   @include header-lg-xlg;
@@ -57,6 +71,8 @@
 // 930px
 @include md-lg {
   @include hero-md-lg;
+  @include footer-md-lg;
+
 }
 // 750px
 @include sm-md {
@@ -64,18 +80,57 @@
 }
 // 650px
 @include sm-md-extra {
+  h2 {
+    font-size: 25px;
+    line-height: 32px;
+    span {
+      font-size: 19px;
+      line-height: 20px;
+    }
+    &.big{
+      padding: 20px;
+    }
+  }
   @include hero-sm-md-extra;
   @include header-sm-md-extra;
   @include nav-sm-md-extra;
+  @include footer-sm-md-extra;
+
 }
 // 540px
 @include xsm-sm {
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    span {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &.big{
+      padding: 15px;
+    }
+  }
   @include hero-xsm-sm;
+  @include footer-xsm-sm;
+
 }
 // 440px
 @include xxsm-xsm {
+  h2 {
+    font-size: 23px;
+    line-height: 28px;
+    span {
+      font-size: 17px;
+      line-height: 17px;
+    }
+    &.big{
+      padding: 15px;
+    }
+  }
   @include hero-xxsm-xsm;
   @include header-xxsm-xsm;
+  @include footer-xxsm-xsm;
+
 }
 // 390px
 @include xxxsm-xxsm {
