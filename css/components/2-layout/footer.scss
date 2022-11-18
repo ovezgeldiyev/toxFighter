@@ -1,5 +1,15 @@
 .footer {
-   
+    background: linear-gradient(91.69deg, #373D71 3.52%, #515E7B 96.63%);
+&__inner{
+    padding: 20px 0;
+    p{
+        font-size: 30px;
+        line-height: 38px;
+        font-family: $montserrat;
+        font-weight: 700;
+        text-align: center;
+    }
+}
     
 }
 // 750px
