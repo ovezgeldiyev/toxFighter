@@ -49,50 +49,108 @@
         </div>
       </div>
     </header>
-    <div class="intro">
-      <div class="auto__container">
-        <div class="intro__inner">
-          <div class="intro__inner-info">
-            <h4>
-              <span>
-                Total Value Distributed
-              </span>
-              $264,234.54
-            </h4>
-            <h4>
-              <span>
-                Total Winners
-              </span>
-              943
-            </h4>
-            <h4 class="big">
-              <span>
-                Next Lottery Payout
-              </span>
-              $0.00 BUSD
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- header end
     =========================================== -->
     <main>
+    <!-- hero start
+    =========================================== -->
+    <section class="hero">
+      <div class="hero__bg">
+        <img src="./images/hero-bg.png" alt="">
+      </div>
+      <div class="auto__container">
+        <div class="hero__inner">
+          <div class="hero__inner-row">
+            <div class="hero__inner-image">
+              <div class="hero__inner-image-bg">
+                <img src="./images/spaceman.png" alt="">
+              </div>
+              <div class="hero__inner-user">
+                <div class="hero__inner-user-icon">
+                  <img src="./images/face.png" alt="">
+                </div>
+                <div class="hero__inner-user-text">
+                  <h5>
+                    OGBYTE (OG)
+                  </h5>
+                  <p>
+                    0.003523 USD
+                  </p>
+                  <span>
+                    (+25.28%)
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="hero__inner-content">
+              <div class="hero__inner-content-header">
+                <h4>
+                  POOL: $0.00
+                </h4>
+                <p>
+                  Token price: 0.00$
+                </p>
+                <p>
+                  MCap: 12.650 $
+                </p>
+              </div>
+              <div class="hero__inner-content-timer">
+                <h3>
+                  NEXT DRAW IN:
+                </h3>
+              </div>
+              <div class="hero__inner-content-footer">
+                <h4>
+                  Your Earning: $0.00 BUSD
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- hero end
+    =========================================== -->
     <!-- footer start
     =========================================== -->
     <footer class="footer">
       <div class="auto__container">
         <div class="footer__inner">
-          <p>
-            Connect Your Wallet To Display More Info
-          </p>
+          <div class="footer__inner-info">
+            <h2>
+              <span>
+                Total Value Distributed
+              </span>
+              $264,234.54
+            </h2>
+            <h2>
+              <span>
+                Total Winners
+              </span>
+              943
+            </h2>
+            <h2 class="big">
+              <span>
+                Next Lottery Payout
+              </span>
+              $0.00 BUSD
+            </h2>
+          </div>
+         
         </div>
+      </div>
+      <div class="footerText">
+       <div class="auto__container">
+        <p>
+          Connect Your Wallet To Display More Info
+        </p>
+       </div>
       </div>
     </footer>
     <!-- footer end
     =========================================== -->
     </main>
-
     <!-- Sprites
     =========================================== -->
     <!-- <svg>
@@ -112,6 +170,47 @@
     <!-- js
     =========================================== -->
     <script src="./js/main.js"></script>
-    
+    <p>
+      <span id="hour">
+
+      </span> 
+      <span id="minute">
+
+      </span>
+      <span id="second">
+
+      </span>
+    </p>
+<script>
+  var myTimer;
+function clock() {
+    myTimer = setInterval(myClock, 1000);
+    let hour = document.querySelector('#hour');
+    let minute = document.querySelector('#minute');
+    let second = document.querySelector('#second');
+
+
+    var c = 3610; //Initially set to 1 hour
+    function myClock() {
+        --c
+        var seconds = c % 60; // Seconds that cannot be written in minutes
+        var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
+        var minutes = secondsInMinutes % 60; // Minutes that cannot be written in hours
+        var hours = (secondsInMinutes - minutes) / 60;
+        // Now in hours, minutes and seconds, you have the time you need.
+        console.clear();
+        console.log(hours + ":" + minutes + ":" + seconds)
+        hour.innerText =hours.toString();
+        minute.innerText =minutes.toString();
+        second.innerText =seconds.toString();
+
+        if (c == 0) {
+            clearInterval(myTimer);
+        }
+    }
+}
+
+clock();
+</script>
   </body>
 </html>
