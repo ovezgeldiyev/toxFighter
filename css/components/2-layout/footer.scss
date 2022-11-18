@@ -1,5 +1,5 @@
 .footer {
-  background:rgba(35, 37, 57, 0.5);
+  background: rgba(35, 37, 57, 0.5);
   backdrop-filter: blur(17.5px);
   &__inner {
     &-info {
@@ -26,21 +26,124 @@
     }
   }
 }
-// 750px
-@mixin footer-sm-md {
+// 1180px
+@mixin footer-xlg-xxlg {
   .footer {
+    &Text {
+      p {
+        font-size: 26px;
+        line-height: 34px;
+      }
+    }
   }
 }
+// 930px
+@mixin footer-md-lg {
+  .footer {
+    &__inner {
+      &-info {
+        padding: 45px 0;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        justify-content: center;
+        h2 {
+          width: calc(50% - 10px);
+          margin: 0 5px 30px;
+          &:nth-child(2) {
+            text-align: center;
+          }
+          &:last-child {
+            width: 100%;
+            max-width: 430px;
+            margin: 0 5px 0;
+          }
+        }
+      }
+    }
+    &Text {
+      p {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
 // 650px
 @mixin footer-sm-md-extra {
   .footer {
+    &__inner {
+      &-info {
+        h2 {
+          &:last-child {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+    &Text {
+      p {
+        padding: 15px 0;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
   }
 }
 // 540px
 @mixin footer-xsm-sm {
   .footer {
+    &__inner {
+      &-info {
+        padding: 40px 0;
+        h2 {
+          &:last-child {
+            max-width: 250px;
+          }
+        }
+      }
+    }
+    &Text {
+      p {
+        padding: 15px 0;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
   }
 }
+// 440px
+@mixin footer-xxsm-xsm {
+  .footer {
+    &__inner {
+      &-info {
+        padding: 35px 0;
+        margin: 0;
+        h2 {
+          width: 100%;
+          margin: 0 0 20px 0;
+          &:nth-child(2) {
+            text-align: left;
+          }
+          &:last-child {
+            width: 100%;
+            text-align: left;
+            max-width: unset;
+            margin: 0;
+          }
+        }
+      }
+    }
+    &Text {
+      p {
+        padding: 15px 0;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
 // 390px
 @mixin footer-xxxsm-xxsm {
   .footer {
