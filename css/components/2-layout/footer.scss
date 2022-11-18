@@ -26,6 +26,18 @@
     }
   }
 }
+// 1180px
+@mixin footer-xlg-xxlg{
+    .footer{
+        &Text{
+            p{
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
 // 750px
 @mixin footer-sm-md {
   .footer {
