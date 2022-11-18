@@ -63,7 +63,7 @@ function clock() {
   let minute = document.querySelector("#minute");
   let second = document.querySelector("#second");
 
-  var c = 3610; //Initially set to 1 hour
+  var c = 360; //Initially set to 1 hour
   function myClock() {
     --c;
     var seconds = c % 60; // Seconds that cannot be written in minutes
@@ -73,9 +73,28 @@ function clock() {
     // Now in hours, minutes and seconds, you have the time you need.
     console.clear();
     console.log(hours + ":" + minutes + ":" + seconds);
-    hour.innerText = hours.toString();
-    minute.innerText = minutes.toString();
-    second.innerText = seconds.toString();
+    console.log(hours.toString(), minutes)
+    let myHour = hours.toString()
+    let myMinute = minutes.toString()
+    let mySecond = seconds.toString()
+    if(myHour.length === 1) {
+      hour.innerText = `0${myHour}`;
+    }
+    else {
+      hour.innerText = myHour;
+    }
+    if(myMinute.length === 1) {
+      minute.innerText = `0${myMinute}`;
+    }
+    else {
+      minute.innerText = myMinute;
+    }
+    if(mySecond.length === 1) {
+      second.innerText = `0${mySecond}`;
+    }
+    else {
+      second.innerText = mySecond;
+    }
 
     if (c == 0) {
       clearInterval(myTimer);
