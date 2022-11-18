@@ -104,7 +104,8 @@
             padding: 50px 20px 20px 20px;
             height: 100%;
             overflow-y: auto;
-            background: rgb(33 34 46 / 50%);
+            background:#232539;
+
             &-links{
                 flex-direction: column;
                 margin-bottom: 50px;
@@ -115,10 +116,6 @@
                 }
             }
             
-            &-buttons{
-                .button{
-                }
-            }
         }
     }
 }

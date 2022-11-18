@@ -16,45 +16,6 @@ window.onclick = function (event) {
 };
 // menu end
 
-// // scroll start
-// let header = document.getElementById("header");
-// function scrollFunc() {
-//   if (window.pageYOffset >= 60) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
-// const links = document.querySelectorAll(".links");
-// const sections = document.querySelectorAll(".anchor");
-// function changeLinkState() {
-//   let index = sections.length;
-//   while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
-//   links.forEach((link) => link.classList.remove("active"));
-//   links[index]?.classList.add("active");
-// }
-// links.forEach((e) => {
-//   onLinkClick(e);
-// });
-// function onLinkClick(linkItem) {
-//   linkItem.addEventListener("click", function () {
-//     menu.classList.remove("active");
-//     menuBtn.classList.remove("active");
-//     body.classList.remove("active");
-//   });
-// }
-// function onLinkClick(linkItem) {
-//   linkItem.addEventListener("click", function () {
-//     menu.classList.remove("active");
-//     menuBtn.classList.remove("active");
-//     body.classList.remove("active");
-//   });
-// }
-// window.onscroll = function () {
-//   changeLinkState();
-//   scrollFunc();
-// };
-// // scroll end
 
 var myTimer;
 function clock() {
@@ -63,7 +24,7 @@ function clock() {
   let minute = document.querySelector("#minute");
   let second = document.querySelector("#second");
 
-  var c = 360; //Initially set to 1 hour
+  var c = 3620; //Initially set to 1 hour
   function myClock() {
     --c;
     var seconds = c % 60; // Seconds that cannot be written in minutes
