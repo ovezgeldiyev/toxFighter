@@ -1,16 +1,33 @@
 h1 {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 85px;
+ 
 }
 
-h2 {
+h2 {    font-family: $montserrat;
+    font-size: 40px;
+    line-height: 48px;
+    color: $green;
 
-}
+    span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 30px;
+        color: $white;
+    }
 
-h3 {
+    &.big {
+        background: linear-gradient(91.69deg, #373d71 3.52%, #515e7b 96.63%);
+        border-radius: 15px;
+        text-align: center;
+        padding: 16px 106px;
+        color: $white;
 
-}
+        span {
+            opacity: .7;
+        }
+    }}
+
+h3 {}
 
 h4 {
 
@@ -22,18 +39,33 @@ h5 {
     line-height: 24px;
 }
 
-h6 {
+h6 {}
 
-}
-p {
+p {}
 
-}
 main {
     overflow: hidden;
-    padding-top: 144px;
 }
+
+
+
 .button {
+    font-family: $montserrat;
+    color: $white;
+    padding: 20px 68px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    &.secondary {
+        background-color: transparent;
+        border: 1px solid;
+    }
+
+    &.primary {
+        background-color: $blue;
+    }
 }
+
