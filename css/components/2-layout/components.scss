@@ -17,7 +17,9 @@ h4 {
 }
 
 h5 {
-
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 h6 {
@@ -28,6 +30,7 @@ p {
 }
 main {
     overflow: hidden;
+    padding-top: 144px;
 }
 .button {
     display: flex;

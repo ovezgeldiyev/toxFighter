@@ -55,10 +55,10 @@ Global Settings
 ====================================================================
    ***/
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   color: #fff;
-  line-height: 40px;
+  line-height: 19px;
   font-weight: 400;
   background: #000;
 }
@@ -92,8 +92,15 @@ h1 {
   line-height: 85px;
 }
 
+h5 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 main {
   overflow: hidden;
+  padding-top: 144px;
 }
 
 .button {
@@ -186,6 +193,129 @@ main {
   display: none;
 }
 
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(102.33deg, #103A3F 2.13%, #000428 92.14%);
+}
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.hero__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 48px 0;
+}
+.hero__inner-image {
+  width: calc(50% - 40px);
+  max-width: 540px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.hero__inner-image-bg {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 125%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__inner-image-bg img {
+  width: 100%;
+}
+.hero__inner-info {
+  border-radius: 15px;
+  background: #63646F40;
+  -webkit-backdrop-filter: blur(17.5px);
+          backdrop-filter: blur(17.5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 16px 16px 24px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 287px;
+}
+.hero__inner-info-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(25% - 20px);
+  max-width: 63px;
+}
+.hero__inner-info-icon img {
+  width: 100%;
+}
+.hero__inner-info-text {
+  width: calc(75% - 25px);
+}
+.hero__inner-info h5 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero__inner-info p {
+  color: #fff;
+  margin-bottom: 4px;
+}
+.hero__inner-content {
+  width: calc(50% - 40px);
+  max-width: 464px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 590px;
+}
 @media (max-width: 1024px) {
   ::-webkit-scrollbar {
     display: none;
